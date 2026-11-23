@@ -10,6 +10,8 @@
 	onMount(loadProgress);
 
 	const pathname = $derived(page.url.pathname);
+	const sandboxHref = $derived(resolve('/sandbox'));
+	const sandboxActive = $derived(pathname === sandboxHref);
 	const completedCount = $derived(progress.completedSlugs.length);
 	const percent = $derived(
 		Math.min(100, Math.round((progress.completedSlugs.length / lessons.length) * 100))
@@ -90,6 +92,20 @@
 			<p class="mt-2 text-xs leading-relaxed text-muted">
 				{percent}% complete. Progress stays in this browser.
 			</p>
+		</div>
+
+		<div class="border-b-2 border-line px-3 py-3">
+			<a
+				class="flex items-center gap-2.5 rounded-lg px-2 py-2 text-sm leading-snug transition hover:bg-paper-deep"
+				class:bg-brand={sandboxActive}
+				class:font-bold={sandboxActive}
+				href={sandboxHref}
+				onclick={closeMenu}
+				aria-current={sandboxActive ? 'page' : undefined}
+			>
+				<span class="w-5 shrink-0 font-mono text-[0.65rem] text-muted">✦</span>
+				<span class="flex-1">Practice sandbox</span>
+			</a>
 		</div>
 
 		<nav class="flex-1 px-3 py-4" aria-label="Course lessons">

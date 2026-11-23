@@ -31,6 +31,7 @@ docs/                         Written course material
 docs/roadmap.md               The full learning path
 docs/lesson-blueprint.md      How a lesson is built
 docs/cheatsheet.md            GSAP quick reference
+docs/learning-log.md          Blank study notebook
 
 src/lib/course.ts             Lesson and phase metadata
 src/lib/progress.svelte.ts    Progress saved in localStorage
@@ -38,6 +39,7 @@ src/lib/lesson-kit/           Shared lesson components
 src/lib/components/Sidebar.svelte
 
 src/routes/+page.svelte       Course home and roadmap
+src/routes/sandbox/           Free practice page with its own targets
 src/routes/lessons/01-.../    One folder per lesson
 src/routes/lessons/22-.../
 ```
@@ -76,3 +78,6 @@ to bottom.
 ## Start here
 
 Read [roadmap.md](roadmap.md). Then open lesson 01 in the app.
+
+When you want to try code without touching a lesson, open `/sandbox`. Write your
+practice in it and keep your notes in [learning-log.md](learning-log.md).

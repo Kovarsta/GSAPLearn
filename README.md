@@ -29,12 +29,14 @@ pnpm run build
 - Shared lesson components live in `src/lib/lesson-kit/`.
 - Lesson metadata lives in `src/lib/course.ts`.
 - Progress is saved in the browser with `localStorage`.
+- Free practice lives at `/sandbox`. Each lesson stays untouched.
 
 ## Docs
 
 - [Roadmap](docs/roadmap.md)
 - [Lesson blueprint](docs/lesson-blueprint.md)
 - [Cheatsheet](docs/cheatsheet.md)
+- [Learning log](docs/learning-log.md) (blank notebook for your own study notes)
 
 ## Stack
 
